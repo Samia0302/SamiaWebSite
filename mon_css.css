@@ -1,0 +1,179 @@
+body{
+	color: black;
+	background-image: url('./images/fond2.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+/**************************/
+/*    Header              */
+/**************************/
+header{
+	grid-area: hd;
+	border:dotted black 5px;
+	text-align:center;
+	height:160px;
+	margin:10px;
+}
+
+/**************************/
+/*         Titres         */
+/**************************/
+.fond-noir{
+	color: white;
+	background-color: black;
+}
+.violet{
+	color: #000;
+	background-color: purple;
+}
+h1{
+	position: -webkit-sticky;
+	position: sticky;
+	text-align: center;
+	
+}
+/**************************/
+/*         Nav		      */
+/**************************/
+nav {
+	grid-area: na;
+	border:dotted purple 5px;
+	background-color: purple;
+}
+ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px;
+}
+ul li a {
+	color:#fff;
+	letter-spacing: 0.1rem;
+}
+ul li a:hover{
+	color: #ffd358;
+	text-decoration:underline;
+}
+.menu li {
+	float: left;
+	padding: 25px;
+}
+.menu li a{
+	text-decoration: none;
+}
+form{
+	padding:25px;
+	text-align:right;
+}
+input[type="search"]{
+	font-size: 17px;
+	
+}
+/**************************/
+/*         Section        */
+/**************************/
+section{
+	grid-area: sec;
+	text-align: center;
+	position: sticky;
+	position: -webkit-sticky;
+	
+}
+section1{
+	grid-area: sec1;
+	
+}
+
+/**************************/
+/*         Aside          */
+/**************************/
+aside{
+	grid-area: as;
+	padding: 10px;
+	border-radius: 20px;
+	font-size:12pt;
+}
+img{
+	width:300pt;
+	border: dotted purple 15px;
+}
+/**************************/
+/*         Footer         */
+/**************************/
+footer{
+	grid-area: ft;
+	border:dotted black 5px;
+	text-align:center;
+	font-size:12px;
+	margin:10px;
+}
+
+
+@media screen and (min-width: 500px){ 
+.wrapper{
+	display: grid;
+	grid-template-columns: 2fr 2fr ; /* crée 3 colonnes */
+	grid-auto-rows: minmax(50px, auto); /* crée des lignes de 50px 
+min. de haut */
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	grid-template-areas: 
+	"hd hd "
+	"na na "
+	"as sec "
+	"ft ft ";
+}
+}
+@media screen and (max-width: 500px){
+.wrapper{
+	display: grid;
+	grid-template-columns: 2fr ; crée 3 colonnes
+	grid-auto-rows: minmax(50px, auto); /* crée des lignes de 50px 
+min. de haut*/
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	grid-template-areas: 
+	"hd"
+	"na "
+	" sec "
+	"as"
+	"ft";
+}
+}
+
+
+@media screen and (min-width: 500px){
+.wrapper2{	
+	grid-template-columns: 2fr 2fr ; /* crée 3 colonnes */
+	grid-auto-rows: minmax(50px, auto); /* crée des lignes de 50px 
+min. de haut */
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	grid-template-areas: 
+	"hd hd "
+	"na na "
+	"sec1 sec1 "
+	". ."
+	"ft ft ";
+}
+}
+
+/* @media screen and (max-width: 500px){
+.wrapper2{
+	display: grid;
+	grid-template-columns: 2fr ; crée 3 colonnes
+	grid-auto-rows: minmax(50px, auto); /* crée des lignes de 50px 
+min. de haut*/
+	/*grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	grid-template-areas: 
+	"hd"
+	"na "
+	"sec1 "
+	"sec1"
+	"ft";
+}
+}
+
+
+ */
